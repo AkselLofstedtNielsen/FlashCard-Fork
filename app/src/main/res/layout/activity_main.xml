@@ -60,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="176dp"
-        android:text="Press anywhere for new word!"
+        android:text="Press anywhere for a new word!"
         android:textColor="#D12222"
         app:layout_constraintBottom_toTopOf="@+id/wordTextView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,8 +70,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="182dp"
-        android:layout_height="144dp"
+        android:layout_width="169dp"
+        android:layout_height="118dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,7 +79,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/gallery_thumb"
-        tools:visibility="visible"
-        app:tint="#D50C0C" />
+        app:tint="#D50C0C"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/languageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

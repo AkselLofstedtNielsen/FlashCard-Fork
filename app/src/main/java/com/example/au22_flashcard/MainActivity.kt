@@ -14,6 +14,7 @@ import kotlin.coroutines.CoroutineContext
 class MainActivity : AppCompatActivity(), CoroutineScope {
 
     lateinit var wordView: TextView
+    lateinit var languageText: TextView
     private val wordList = mutableListOf<Word>()
     private val usedWords = mutableListOf<Word>()
     var currentWord: Word? = null
@@ -39,6 +40,8 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
         }
 
 
+        languageText = findViewById(R.id.languageText)
+        languageText.setText("Svenska")
         val hintText = findViewById<TextView>(R.id.hintText)
         val hintText2 = findViewById<TextView>(R.id.hintText2)
         hintText.isVisible = true
@@ -79,6 +82,7 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
 
         currentWord = getNewWord()
         wordView.text = currentWord?.swedish
+        languageText.setText("Svenska")
     }
 
     fun getNewWord(): Word {
@@ -101,6 +105,7 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
 
     fun revealTranslation() {
         wordView.text = currentWord?.english
+        languageText.setText("English")
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
